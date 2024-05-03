@@ -1,0 +1,21 @@
+---
+ const { title } = Astro.props;
+---
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+    <header>
+        <div class="main">
+		
+            <h1>🚀 To Do List | Daily Task 🚀</h1>
+        </div>
+    </header>
+	<slot/>
+	</body>
+</html>
+
