@@ -1,5 +1,8 @@
 ---
+import Header from "../components/Header.astro";
+
  const { title } = Astro.props;
+
 ---
 <html lang="es">
 	<head>
@@ -8,14 +11,21 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+    <!-- Aca vamos a poner el Header -->
 	<body>
-    <header>
-        <div class="main">
-		
-            <h1>🚀 To Do List | Daily Task 🚀</h1>
-        </div>
-    </header>
-	<slot/>
+
+        <Header/>
+        <main>
+            <slot/>
+        </main>
 	</body>
 </html>
+
+<!-- ESTILOS GLOBALES -->
+<style>
+ main {
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    min-height: 100vh;
+ }
+</style>
 
