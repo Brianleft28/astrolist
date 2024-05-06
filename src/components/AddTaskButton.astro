@@ -1,9 +1,12 @@
 ---
+const { button } = Astro.props;
+
+
 
 ---
 
-<button>
-    <slot></slot>
+<button id="button">
+    <slot>{button}</slot>
 </button>
 
 <style>
