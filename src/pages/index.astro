@@ -1,9 +1,21 @@
 ---
+import AddTaskButton from "../components/AddTaskButton.astro";
 import Layout from "../layouts/Layout.astro";
-
-
 ---
+
 <!-- HOME -->
 <Layout title="Inicio">
-<p>Esto es el inicio</p>
+<div class="container">
+    <p>Bienvenido a Daily Task Manager, tu herramienta diaria para organizar tus tareas con eficiencia</p>
+   <AddTaskButton>Agregar Tarea</AddTaskButton>
+
+</div>
+
 </Layout>
+
+<style>
+    .container {
+        align-self: center;
+        text-align: center;
+    }
+</style>

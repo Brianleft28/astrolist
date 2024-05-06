@@ -1,4 +1,4 @@
-<div class="contenedor__principal">
+<div class="barra_navegacion">
     <div class="logo">
         <h1>
             Daily Task Manager | 
@@ -7,21 +7,43 @@
             DTM
         </span>
     </div>
+    <div class="nav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/tareas">Tareas</a></li>
+            <li><a href="/perfil">Perfil</a></li>
+        </ul>
+    </div>
 </div>
 
 <style>
     .logo {
         display: flex;
         gap: 5px;
-        justify-self: flex-start;
         padding: 2px;
         margin: 5px;
     }
-    .contenedor__principal {
+    ul {
         display: flex;
-        align-items: center;
-        height: 100%;
-        margin-bottom: 5px;
-        
+        flex-direction: row;
+        gap: 15px;
     }
+    .barra_navegacion {
+        display: flex;
+        color: #000;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f0f0f0;
+        margin-bottom: 5px; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 10px 20px; 
+        box-sizing: border-box; 
+        z-index: 1000; 
+    }
+
 </style>

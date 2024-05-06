@@ -1,7 +1,11 @@
 ---
+// NAV // 
 import Header from "../components/Header.astro";
 
- const { title } = Astro.props;
+// Font weights 100-700 // 
+import '@fontsource-variable/roboto-mono';
+// Propis for the title 
+const { title } = Astro.props;
 
 ---
 <html lang="es">
@@ -9,11 +13,12 @@ import Header from "../components/Header.astro";
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<!-- FUENTE -->
+
 		<title>{title}</title>
 	</head>
     <!-- Aca vamos a poner el Header -->
 	<body>
-
         <Header/>
         <main>
             <slot/>
@@ -22,10 +27,24 @@ import Header from "../components/Header.astro";
 </html>
 
 <!-- ESTILOS GLOBALES -->
-<style>
+<style is:global>
  main {
-    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-    min-height: 100vh;
+	background-color: beige;
+	padding: 25px 50px 50px 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	max-width: 75%;
+	margin: 0 auto;
+	margin-top: 50px;
+	min-height: calc(100vh - 50px);
+	
  }
+ body {
+	font-family: 'Roboto Mono Variable', monospace;
+ }
+
+
+
 </style>
 
