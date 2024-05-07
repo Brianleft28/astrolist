@@ -1,14 +1,15 @@
 ---
-import AddTaskButton from "../components/AddTaskButton.astro";
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.jsx";
 ---
 
 <!-- HOME -->
 <Layout title="Inicio">
-<div class="container">
-    <p>Bienvenido a <b>Daily Task Manager</b>, tu herramienta diaria para organizar tus tareas con eficiencia.</p>
-   <AddTaskButton button='Agregar Tarea'/>
-
+<div class="container ">
+    <p class=" mb-4">Bienvenido a <b>Daily Task Manager</b>, tu herramienta diaria para organizar tus tareas con eficiencia.</p>
+    <Button className={'font-semibold bg-blue-700  text-white rounded-full p-3 shadow-sm w-80'}>
+       Comienze a agregar sus tareas.  
+    </Button>
 </div>
 
 </Layout>

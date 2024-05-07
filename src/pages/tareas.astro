@@ -1,9 +1,16 @@
 ---
+import CardTask from "../components/tasks/CardTask";
+import TaskList from "../components/tasks/TaskList";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <h2>
-        Tareas
-    </h2>
+    <div class="flex-col max-w-52">
+
+        <CardTask client:load/>
+        <p class="mt-20 text-justify min-w-full w-80">Introduzca una tarea para poder agregarla a la lista de pendientes.</p>
+    </div>
+    <div class="flex-col">
+        <TaskList client:load/>
+    </div>
 </Layout>
